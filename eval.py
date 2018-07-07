@@ -39,7 +39,8 @@ def evaluate(_):
         videoPafy = pafy.new(video)
         video = videoPafy.getbest(preftype="mp4").url
 
-    cam = cv2.VideoCapture(video)
+    #cam = cv2.VideoCapture(video)
+    cam = cv2.VideoCapture('http://192.168.43.1:8080/videofeed')
     if not cam.isOpened():
         raise IOError('Can\'t open "{}"'.format(FLAGS.video))
 

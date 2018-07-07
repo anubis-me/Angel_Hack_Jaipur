@@ -130,7 +130,7 @@ class Daemon(Server):
                     formatted = format_predictions(predictions)
                     logger.info('Predictions: {}'.format(formatted))
                     self._send_dh(format_notification(predictions))
-
+                print(predictions)
                 frame_num += 1
 
         finally:
